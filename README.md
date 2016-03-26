@@ -4,7 +4,7 @@
 
 linux系统下可执行以下命令运行
 ```shell
-python3 main.py &
+python3 main.py
 ```
 或用以下命令后台运行
 ```shell
