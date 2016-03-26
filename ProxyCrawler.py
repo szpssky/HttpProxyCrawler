@@ -45,9 +45,6 @@ class ProxyCrawler:
         for i in range(len(td_list)):
             if i % 7 == 0:
                 self.list_proxyAddr.append(str(td_list[i].string) + ':' + str(td_list[i + 1].string))
-                # with open('proxyAddress.txt','w') as f:
-                #     for addr in self.list_proxyAddr:
-                #         f.write(addr+'\n')
 
     def crawler_xicidaili(self,pageNum):
         currenturl = self.ProxyWebUrl_xicidaili + str(pageNum)
@@ -81,29 +78,3 @@ class ProxyCrawler:
     def startCrawler(self,pageNum):
         self.crawler_kuaidaili(pageNum)
         self.crawler_xicidaili(pageNum)
-
-        # with open('proxyAddress.txt', 'w') as f:
-        #     for addr in self.list_proxyAddr:
-        #         f.write(addr + '\n')
-
-        # for i in range(1, 1000):
-        #     item = random.choice(self.list_proxyAddr)
-        #     if self.isAvailable(item):
-        #         self.avilableProxy.add(item)
-        #
-        # with open('proxyAddress.txt', 'w') as f:
-        #     for addr in self.avilableProxy:
-        #         f.write(addr + '\n')
-
-
-
-# c = ProxyCrawler()
-# # c.startCrawler()
-# # print(c.isAvailable('211.167.248.228:8080'))
-# for i in range(1,20):
-#     c.startCrawler(i)
-#     print(i)
-#     with open('proxyAddress.txt', 'w') as f:
-#         for addr in c.list_proxyAddr:
-#             f.write(addr + '\n')
-# c.crawler_xicidaili(1)
