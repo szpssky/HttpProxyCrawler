@@ -10,7 +10,7 @@ import threading
 
 print("代理服务器地址抓取开始..................")
 crawler = ProxyCrawler.ProxyCrawler()
-for i in range(1,50):
+for i in range(1,2):
     crawler.startCrawler(i)
     with open('proxyAddress.txt', 'w') as f:
         for addr in crawler.list_proxyAddr:
@@ -28,7 +28,7 @@ while(True):
     print('1小时候后更新ip地址集')
     time.sleep(3600)
     crawler = ProxyCrawler.ProxyCrawler()
-    crawler.startCrawler(2)
+    crawler.startCrawler(1)
     with open('proxyAddress.txt', 'a') as f:
         for addr in crawler.list_proxyAddr:
             f.write(addr + '\n')
