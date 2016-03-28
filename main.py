@@ -10,7 +10,7 @@ import threading
 
 print("代理服务器地址抓取开始..................")
 crawler = ProxyCrawler.ProxyCrawler()
-for i in range(1,2):
+for i in range(1,10):
     crawler.startCrawler(i)
     with open('proxyAddress.txt', 'w') as f:
         for addr in crawler.list_proxyAddr:
